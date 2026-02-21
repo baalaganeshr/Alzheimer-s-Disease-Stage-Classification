@@ -1,0 +1,33 @@
+{
+    "timestamp": "2026-02-12T12:24:05.848734",
+    "configuration": {
+        "epochs": 30,
+        "batch_size": 32,
+        "learning_rates": [
+            0.001,
+            0.01
+        ],
+        "pca_components": 100,
+        "classes": [
+            "Non Demented",
+            "Moderate Dementia"
+        ]
+    },
+    "results": {
+        "0.001": {
+            "test_accuracy": 1.0,
+            "test_loss": 0.16884350776672363,
+            "accuracy_percentage": 100.0
+        },
+        "0.01": {
+            "test_accuracy": 1.0,
+            "test_loss": 0.08895549923181534,
+            "accuracy_percentage": 100.0
+        }
+    },
+    "best_model": {
+        "learning_rate": 0.001,
+        "test_accuracy": 1.0,
+        "test_loss": 0.16884350776672363
+    }
+}

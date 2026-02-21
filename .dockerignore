@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Project specific
+outputs/
+models/
+*.h5
+*.pkl
+
+# Dataset (mounted as volume)
+dataset/
+../dataset/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+*.pdf
+*.docx
+
+# Archives
+*.zip
+*.tar.gz

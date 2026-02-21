@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  alzheimer-classifier-cpu:
+    build:
+      context: .
+      dockerfile: Dockerfile.cpu
+    container_name: alzheimer-classification-cpu
+    volumes:
+      # Mount dataset from parent directory
+      - ../dataset:/app/dataset:ro
+      # Mount outputs for results
+      - ./outputs:/app/outputs
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TF_CPP_MIN_LOG_LEVEL=2
+    shm_size: '4gb'
+    stdin_open: true
+    tty: true

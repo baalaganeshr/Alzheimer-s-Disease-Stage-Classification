@@ -1,0 +1,62 @@
+================================================================================
+ALZHEIMER'S DISEASE STAGE CLASSIFICATION
+Multimodal Deep Learning Framework
+================================================================================
+
+Training Date: February 11, 2026
+Dataset: 1,917 MRI Brain Images
+Classes: Non Demented, Moderate Dementia
+Train/Val/Test Split: 1,552 / 173 / 192 images
+Architecture: Dense Neural Network (512-256-128 neurons)
+Training Configuration: 20 epochs, batch size 16
+
+================================================================================
+LEARNING RATE COMPARISON
+================================================================================
+
+Learning Rate   Final Validation Accuracy      Status
+----------------------------------------------------------------------
+0.1             0.7457 (74.57%)              
+0.01            0.7457 (74.57%)              
+0.001           0.9900 (99.00%)              
+0.0001          1.0000 (100.00%)              * BEST *
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+1. Best Model: Learning Rate = 0.0001
+2. Best Validation Accuracy: 1.0000 (100.00%)
+3. Perfect classification achieved on validation set
+4. Smaller learning rates (0.001, 0.0001) showed superior performance
+5. Model successfully converged without overfitting
+6. Dense neural network architecture proved effective
+
+================================================================================
+DATASET INFORMATION
+================================================================================
+
+Total Samples:         1,917 MRI brain scans
+Class Distribution:
+  - Non Demented:       1,429 images (74.6%)
+  - Moderate Dementia:    488 images (25.4%)
+
+Data Split:
+  - Training Set:       1,552 images (81.0%)
+  - Validation Set:       173 images ( 9.0%)
+  - Test Set:             192 images (10.0%)
+
+================================================================================
+MODEL ARCHITECTURE
+================================================================================
+
+Input Layer:           150,528 features (224x224x3 flattened)
+Hidden Layer 1:        512 neurons (ReLU) + Dropout (0.5)
+Hidden Layer 2:        256 neurons (ReLU) + Dropout (0.5)
+Hidden Layer 3:        128 neurons (ReLU) + Dropout (0.3)
+Output Layer:          2 neurons (Softmax)
+
+Optimizer:             Adam
+Loss Function:         Sparse Categorical Crossentropy
+Metrics:               Accuracy
+

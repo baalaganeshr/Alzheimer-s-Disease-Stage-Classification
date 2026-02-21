@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  alzheimer-classifier:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: alzheimer-classification
+    volumes:
+      # Mount dataset from parent directory
+      - ../dataset:/app/dataset:ro
+      # Mount outputs for results
+      - ./outputs:/app/outputs
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TF_CPP_MIN_LOG_LEVEL=2
+      - CUDA_VISIBLE_DEVICES=0
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    shm_size: '8gb'
+    stdin_open: true
+    tty: true

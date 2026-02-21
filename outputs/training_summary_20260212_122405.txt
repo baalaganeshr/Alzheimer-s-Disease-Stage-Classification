@@ -1,0 +1,64 @@
+================================================================================
+ALZHEIMER'S DISEASE STAGE CLASSIFICATION - TRAINING SUMMARY
+================================================================================
+
+Training Date: 2026-02-12 12:24:05
+Framework: DWT + LBP + DenseNet
+Dataset Classes: Non Demented, Moderate Dementia
+Number of Classes: 2
+
+--------------------------------------------------------------------------------
+TRAINING CONFIGURATION
+--------------------------------------------------------------------------------
+Epochs: 30
+Batch Size: 32
+Learning Rates Tested: [0.001, 0.01]
+PCA Components: 100
+Dense Units: [512, 256, 128]
+Dropout Rate: 0.5
+
+--------------------------------------------------------------------------------
+RESULTS BY LEARNING RATE
+--------------------------------------------------------------------------------
+
+Learning Rate: 0.001
+  Test Accuracy: 1.0000 (100.00%)
+  Test Loss: 0.1688
+  Epochs Trained: 30
+  Final Training Accuracy: 0.9993
+  Final Validation Accuracy: 1.0000
+
+Learning Rate: 0.01
+  Test Accuracy: 1.0000 (100.00%)
+  Test Loss: 0.0890
+  Epochs Trained: 30
+  Final Training Accuracy: 0.9987
+  Final Validation Accuracy: 1.0000
+
+================================================================================
+BEST MODEL
+================================================================================
+Learning Rate: 0.001
+Test Accuracy: 1.0000 (100.00%)
+
+================================================================================
+TARGET PERFORMANCE COMPARISON
+================================================================================
+Target Accuracy: 99.42%
+Achieved Accuracy: 100.00%
+Status: [EXCEEDED]
+
+Target F1 Score: 98.28%
+Achieved F1 Score: 100.00%
+Status: [EXCEEDED]
+
+================================================================================
+OUTPUT FILES
+================================================================================
+Models saved to: C:\Users\baala\OneDrive\Desktop\mlc\Alzheimer-s-Disease-Stage-Classification\models
+Visualizations saved to: C:\Users\baala\OneDrive\Desktop\mlc\Alzheimer-s-Disease-Stage-Classification\outputs
+  - Training curves (per LR)
+  - Confusion matrices (per LR)
+  - ROC curves (per LR)
+  - Learning rate comparison plot
+
